@@ -7,7 +7,7 @@ const InfoModal = ({ isOpen, onClose, infoPokemon }) => {
       isOpen={isOpen}
       onRequestClose={onClose}
       contentLabel="Example Modal"
-      className="modal"
+      className="modal fade"
       ariaHideApp={false}
     >
       {infoPokemon && infoPokemon.sprites ? (
