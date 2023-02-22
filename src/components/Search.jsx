@@ -14,7 +14,7 @@ const Search = () => {
 
   const handleInputChange = (e) => {
     setIsTyping(true);
-    setInputPokemon(e.target.value);
+    setInputPokemon(e.target.value.toLowerCase());
   };
 
   useEffect(() => {
