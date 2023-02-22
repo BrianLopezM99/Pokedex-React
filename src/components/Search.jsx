@@ -64,7 +64,7 @@ const Search = () => {
             />
           </Box>
           <Box gridColumn="span 12">
-            <div className="button-container">
+            <div className="container-center">
               <button className="button" onClick={handleSubmit}>
                 Search
               </button>
@@ -73,7 +73,7 @@ const Search = () => {
           {infoPokemon && !isTyping ? (
             <>
               <Box gridColumn="span 12">
-                <div className="button-container">
+                <div className="container-center">
                   <button className="button" onClick={handleSeeInfo}>
                     See more information
                   </button>

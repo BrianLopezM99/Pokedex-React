@@ -64,7 +64,7 @@ const MainPokedex = ({ callPokemon }) => {
         isOpen={isModalOpen}
         onClose={handleCloseModal}
       />
-      <div className="button-container">
+      <div className="container-center">
         {offset === 0 ? (
           <button className="button-disabled" onClick={handlePrevious} disabled>
             Previous Page

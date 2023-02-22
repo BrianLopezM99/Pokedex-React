@@ -12,12 +12,37 @@ const InfoModal = ({ isOpen, onClose, infoPokemon }) => {
     >
       {infoPokemon && infoPokemon.sprites ? (
         <>
-          <h2>Información del Pokémon</h2>
-          <img src={infoPokemon.sprites.front_default} alt="" />
-          <p>Nombre: {infoPokemon ? infoPokemon.name : 'Nombre no disponible'}</p>
-          <p>Tipo: {infoPokemon && infoPokemon.types ? infoPokemon.types[0].type.name : 'Tipo no disponible'}</p>
+          <div className="main">
+            <h2>Información del Pokémon</h2>
+            <h3>Normal</h3>
+            <div className="container-modal">
+              <img src={infoPokemon.sprites.front_default} alt="" />
+              <img src={infoPokemon.sprites.back_default} alt="" />
+            </div>
+            <h3>Shiny</h3>
+            <div className="container-modal">
+              <img src={infoPokemon.sprites.front_shiny} alt="" />
+              <img src={infoPokemon.sprites.back_shiny} alt="" />
+            </div>
+            <div className="container-text">
+              <p className="pa">
+                Nombre:{" "}
+                {infoPokemon ? infoPokemon.name : "Nombre no disponible"}
+              </p>
+              <p className="pa" style={{marginLeft: "15px"}}>
+                Tipo:{" "}
+                {infoPokemon && infoPokemon.types
+                  ? infoPokemon.types[0].type.name
+                  : "Tipo no disponible"}
+              </p>
+            </div>
+          </div>
 
-          <button onClick={onClose}>Cerrar</button>
+          <div className="container-center">
+            <button className="button" onClick={onClose}>
+              Cerrar
+            </button>
+          </div>
         </>
       ) : (
         <button onClick={onClose}>Cerrar</button>
